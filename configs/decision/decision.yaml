@@ -1,0 +1,4 @@
+history_window_seconds: 2.0
+confidence_threshold: 0.7
+required_consecutive_predictions: 3
+alert_cooldown_seconds: 5.0
