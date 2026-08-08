@@ -216,3 +216,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ROS 2 / colcon
+install/
+log/
+
+# ROS 2 generated files
+.colcon/
+
+# Model weights and large model artifacts
+*.pt
+*.pth
+*.onnx
+*.engine
+*.safetensors
+
+# Experiment-generated data
+# Uncomment these if results/plots contain only generated files
+# results/*
+# plots/*
+
+# Docker logs
+docker/*.log
