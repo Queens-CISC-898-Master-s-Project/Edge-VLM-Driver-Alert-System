@@ -1,0 +1,25 @@
+{
+    "name": "EdgeVLM-Drive Jetson Environment",
+
+    "runArgs": [
+        "--name=EdgeVLM-Drive-jetson"
+    ],
+    
+    "build": {
+        "dockerfile": "../../docker/Dockerfile.jetson"
+    },
+
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker",
+                "redhat.vscode-yaml"
+            ]
+        }
+    }
+}

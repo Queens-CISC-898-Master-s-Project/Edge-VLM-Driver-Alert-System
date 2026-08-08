@@ -1,0 +1,25 @@
+{
+    "name": "EdgeVLM-Drive Dev Environment",
+
+    "runArgs": [
+        "--name=EdgeVLM-Drive-dev"
+    ],
+    
+    "build": {
+        "dockerfile": "../../docker/Dockerfile.dev"
+    },
+
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker",
+                "redhat.vscode-yaml"
+            ]
+        }
+    }
+}

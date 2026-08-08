@@ -1,0 +1,25 @@
+FROM python:3.11-slim
+
+LABEL maintainer="EdgeVLM-Drive Team"
+
+# Environment
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Install basic development tools
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    wget \
+    vim \
+    build-essential \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip
+RUN pip install --upgrade pip
+
+# Working directory
+WORKDIR /workspace
+
+CMD ["bash"]
